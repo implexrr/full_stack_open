@@ -1,6 +1,6 @@
 # Website: https://www.websequencediagrams.com/
 
-browser->server: HTTP https://studies.cs.helsinki.fi/exampleapp/spa
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
 server-->browser: spa.html
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
 server-->browser: main.css
@@ -18,13 +18,3 @@ note over browser:
 browser executes the event handler
 that renders notes to display
 end note
-
-browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
-note over browser:
-browser submits POST request to server with 
-paylod containing JSON data
-end note
-note over server:
-server parses JSON data, then responds
-end note
-server-->browser: JSON data {"message":"note created"}

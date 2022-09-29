@@ -1,0 +1,13 @@
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over browser:
+browser submits POST request to server with 
+paylod containing JSON data
+end note
+note over server:
+server parses JSON data, then responds
+end note
+server-->browser: JSON data {"message":"note created"}
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
